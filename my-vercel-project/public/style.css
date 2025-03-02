@@ -1,0 +1,119 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Mengganti justify-items dengan align-items */
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #89CFF0, #003366);
+    overflow: hidden;
+    position: relative;
+}
+
+
+body::before, body::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    filter: blur(150px);
+    animation: move 10s infinite alternate;
+}
+
+body::before {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    left: -100px;
+}
+
+body::after {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    right: -50px;
+}
+
+@keyframes move {
+    to {
+        transform: translate(50px, 50px);
+    }
+}
+
+.box-login {
+    height: 250px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    color: white;
+}
+
+.box-login p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+input {
+    width: 220px;
+    margin-top: 20px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 230px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #003366;
+    color: white;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+.teks {
+    flex-direction: row;
+    display: flex;
+    width: 230px;
+    margin-top: 20px;
+}
+
+.registrasi, .lupa-password {
+    flex: 1;
+}
+
+.lupa-password {
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ddd;
+}
